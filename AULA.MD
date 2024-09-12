@@ -32,7 +32,27 @@ number: 1,2,3,4....
 Boolean: True ou False
 Function:
 
+## Estruturas de dados:
+Arrays:
+ Uma lista que contém qualquer tipo de dado
+ Métodos de array: push, find, forEach
+Objetos:
+ Atributos e métodos
+ Criação e manipulação de objetos
+ Acesso a propriedades de objetos
+Functions
+ criar, passar argumento
+ excutar
+ arrow function / named function
+
+
+
 ## Operadores
 
 Operadores de Atribuição de valor =
 Operador de contetenação +
+
+## Estrutura de repetição
+
+while
+
