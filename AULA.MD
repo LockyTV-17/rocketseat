@@ -51,11 +51,12 @@ Functions
 
 Operadores de Atribuição de valor =
 Operador de contetenação +
+Operadores de compração == , !=, <, >,=,<=,>=
 
 ## Estrutura de repetição
 
 while
-
+if/else
 
 ## Modulos em Node.js
 Importação de modulos (require, Commonjs)
