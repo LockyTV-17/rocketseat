@@ -47,10 +47,11 @@ const start = async () => {
 
         switch (opcao) {
             case "cadastrar":
-                await castrarmeta()
-                break              
-                case "listar":
-                    console.log("vamos listar")
+                await castrarmeta()                           
+                console.log(metas)
+                break    
+            case "listar":
+                console.log(metas)
                 break;
             case "sair": 
             console.log("ate a proxima")
