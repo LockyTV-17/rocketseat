@@ -56,3 +56,11 @@ Operador de contetenação +
 
 while
 
+
+## Modulos em Node.js
+Importação de modulos (require, Commonjs)
+Biblioteca 'inquirer' para criar prompts interativos
+
+## Programção assicrona e promises
+
+Uso de funções assincronas (async/awit)
