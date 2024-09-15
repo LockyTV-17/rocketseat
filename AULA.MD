@@ -52,7 +52,13 @@ Functions
 Operadores de Atribuição de valor =
 Operador de contetenação +
 Operadores de compração == , !=, <, >,=,<=,>=
+Spread operator:...
 
+## Estruturas de dados
+
+## Arrays 
+Uma Lista que contem qualquer tipo de dado 
+Metodos de array:push,[find, forEach,FIlter] HOF (Higher Order Functions)
 ## Estrutura de repetição
 
 while
