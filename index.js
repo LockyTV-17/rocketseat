@@ -1,7 +1,28 @@
-const { select,input, checkbox }= require ('@inquirer/prompts')
+const { select,input, checkbox }= require ('@inquirer/prompts');
+const { isUtf8 } = require('buffer');
+const fs = require ("fs").promises;
 
 let mensagem = "Faça Suas Metas Aqui";
-let metas = []
+
+let metas
+
+const carregarMetas = async () => {
+    try {
+        const dados = await fs.readFile("metas.json", "utf-8")
+        metas = JSON.parse(dados)
+    }
+    catch(error) {
+        metas = []
+    }   
+}
+
+const salvarMetas = async () => {
+    try {
+        await fs.writeFile('metas.json', JSON.stringify(metas, null, 2));
+    } catch (err) {
+        console.error('Erro ao salvar metas:', err);
+    }
+};
 
 const castrarmeta= async () => {
     const meta = await input ({message: "Digite a meta"})
@@ -20,7 +41,7 @@ const castrarmeta= async () => {
 
 const listarMetas = async () => {
    if (metas.length == 0) {
-    mensagem = "não existe metas"
+    mensagem = "Não existe metas"
     return
     
    }
@@ -53,7 +74,7 @@ const listarMetas = async () => {
 const MetasRealizadas = async () => {
     
     if (metas.length == 0 ) {
-        mensagem = "Não Existe Metas"
+        mensagem = "Não Existe Metas realaizadas"
         return
         
     }
@@ -123,9 +144,11 @@ const mostrarMensagem = () => {
 }
 
 const start = async () => {
+    await carregarMetas()    
     
     while (true) {
         mostrarMensagem()
+        await salvarMetas()
 
         const opcao = await select ({
             message: "Menu >",
@@ -161,16 +184,19 @@ const start = async () => {
 
         switch (opcao) {
             case "cadastrar":
-                await castrarmeta()                           
+                await castrarmeta()                        
                 break    
             case "listar":
                 await listarMetas()
+                
                 break
             case "Realizadas":
                 await MetasRealizadas()
+               
                 break
             case "Abertas":
                 await MetasAbertar()
+
                 break
             case "deletar":
                 await deletarMetas()

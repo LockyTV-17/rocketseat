@@ -67,6 +67,13 @@ if/else
 ## Modulos em Node.js
 Importação de modulos (require, Commonjs)
 Biblioteca 'inquirer' para criar prompts interativos
+FS. FILE SYSTEM
+
+## JSON
+
+JAVASCRIPT OBJECT NOTATION (.JASON)
+JASON.PERSER(): TRANSFORMA DE JSON PARA JS
+JASON.STRINGIFY(): TRANSFORMA DE JS PARA JASON
 
 ## Programção assicrona e promises
 
