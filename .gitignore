@@ -1,4 +1,4 @@
 # Ignorar arquivos de build
-/node_modules/
-/AULA/
-/FAZER/
+node_modules/
+AULA/
+FAZER/
