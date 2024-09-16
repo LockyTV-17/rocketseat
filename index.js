@@ -58,7 +58,7 @@ const listarMetas = async () => {
     })
 
     if (respostas.length == 0) {
-        mensagem = "nenhuma meta selecionada"
+        mensagem = "Nenhuma meta selecionada"
         return      
     }
     
@@ -68,7 +68,7 @@ const listarMetas = async () => {
         })
         meta.checked = true
     }) 
-    mensagem = "Meta(s) Marcadas como concluidas"   
+    mensagem = "Meta(s) Marcadas como concluida(a):"   
 }
 
 const MetasRealizadas = async () => {
@@ -82,7 +82,7 @@ const MetasRealizadas = async () => {
         return meta.checked
     })
     if (Realizadas.length == 0 ) {
-        mensagem = "Não Existe Metas realizadas"
+        mensagem = "Não Existe Metas Realizadas"
         return
     }
     await select({
@@ -97,7 +97,7 @@ const MetasAbertar = async () => {
         
         })
         if (Abertas.length == 0) {
-            mensagem ="Não Existem metas abertas"
+            mensagem ="Não Existem Metas abertas"
             return            
         }
         await select ({
@@ -121,7 +121,7 @@ const deletarMetas = async () =>{
         instructions: false,
     } )
     if (itemsAdeletar.length == 0) {
-        mensagem = "Nenhum Item Para deletar"
+        mensagem = "Nenhum Item Para Deletar"
         return
     }
     itemsAdeletar.forEach((item) =>{
@@ -154,28 +154,28 @@ const start = async () => {
             message: "Menu >",
              choices:[
                 {
-                    name: "cadastra meta",
+                    name: "Cadastra Meta:",
                     value: "cadastrar"
                 },
                 {
-                    name: "listar metas",
+                    name: "Listar Metas:",
                     value: "listar"
                 },
                 {
-                    name: "Metas Realizadas",
+                    name: "Metas Realizadas:",
                     value: "Realizadas"
                 },
                 
                 {
-                    name: "Metas abertar",
+                    name: "Metas em Abertar:",
                     value: "Abertas"
                 },
                 {
-                    name: "deletar metas",
+                    name: "Deletar Metas:",
                     value: "deletar"
                 },
                 {
-                    name: "sair",
+                    name: "Sair",
                     value: "sair"
                 }
 
