@@ -1,3 +1,4 @@
-node_modules/
-FAZER.md/
-FAZER.md/
+# Ignorar arquivos de build
+/node_modules/
+/AULA/
+/FAZER/
